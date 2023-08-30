@@ -5,17 +5,19 @@
     "build": "eleventy"
   },
   "author": "Nath Paiva <hello@nathpaiva.com.br>",
-  "devDependencies": {
-    "@11ty/eleventy": "^0.11.0"
-  },
-  "dependencies": {
-    "node-fetch": "^2.6.0"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nathpaiva/first-serverless-app.git"
   },
   "license": "CC-BY-NC-SA-4.0",
   "version": "1.0.0",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  },
+  "dependencies": {
+    "@11ty/eleventy-upgrade-help": "^2.0.5",
+    "esm-hook": "^0.1.4",
+    "node-fetch": "^3.3.2"
+  }
 }
