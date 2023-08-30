@@ -2,3 +2,10 @@
   command = "npm run build"
   publish = "_site"
   functions = "functions"
+
+[dev]
+  command = "npm run dev"
+  functions = "functions"
+  publish = "_site"
+  targetPort = 8081
+  port = 8888
