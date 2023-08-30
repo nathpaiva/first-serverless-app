@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e10a7c08-1e7f-40bf-b30f-745429856dd9/deploy-status)](https://app.netlify.com/sites/movies-serverless-app/deploys)
+
 # Frontend Masters: Serverless Functions with Jason Lengstorf
 
 This is the source code for a Frontend Masters course with Jason Lengstorf about serverless functions.
