@@ -6,4 +6,6 @@
 [dev]
   command = "npm run dev"
   functions = "functions"
-  targetPort = 8080
+  publish = "_site"
+  targetPort = 8081
+  port = 8888
