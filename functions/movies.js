@@ -20,19 +20,25 @@ exports.handler = async () => {
 
     api.searchParams.set('apikey', process.env.OMDB_API_KEY);
 
-    const promisesArray = movies.map((movie) => {
+    const promisesArray = movies.reduce((acc, movie) => {
+      // to remove the wrong data
+      if (!movie.id || movie.id === 'id') return acc;
+
       api.searchParams.set('i', movie.id);
 
-      return fetch(api)
-        .then((responseMovieScores) => responseMovieScores.json())
-        .then(({ Poster, Ratings }) => {
-          return {
-            ...movie,
-            poster: Poster,
-            scores: Ratings,
-          };
-        });
-    });
+      acc.push(
+        fetch(api)
+          .then((responseMovieScores) => responseMovieScores.json())
+          .then(({ Poster, Ratings }) => {
+            return {
+              ...movie,
+              poster: Poster,
+              scores: Ratings,
+            };
+          })
+      );
+      return acc;
+    }, []);
 
     return {
       statusCode: 200,
